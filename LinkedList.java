@@ -19,7 +19,11 @@ public class LinkedList<T> {
     }
 
     public Boolean isEmpty(){
-        return true;
+        if (head == null){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void add(T data){
@@ -55,6 +59,11 @@ public class LinkedList<T> {
     }
 
     public Boolean search(T data){
+
+        if (head == null){
+            //List is empty and contains nothing
+            return false;
+        }
 
         Node currentNode = head;
 
